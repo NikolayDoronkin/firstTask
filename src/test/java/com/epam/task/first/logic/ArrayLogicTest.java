@@ -63,29 +63,16 @@ public class ArrayLogicTest {
     @Test
     public void testSetElementWithCorrectIndex() {
         //given
-        Array array = new Array(-33, -42, -813, -1, -5, -18);
+        Array array = new Array(-33, -42, 664, -1, -5, -18);
         int index = 2;
         int element = 666;
 
         //when
-        boolean actual = arrayLogic.setElement(array, index, element);
+        int actual = arrayLogic.setElement(array, index, element);
+        int expected = 666;
 
         //then
-        Assert.assertTrue(actual);
-    }
-
-    @Test
-    public void testSetElementWithIncorrectIndex() {
-        //given
-        Array array = new Array(-33, -42, -813, -1, -5, -18);
-        int index = -5;
-        int element = 666;
-
-        //when
-        boolean actual = arrayLogic.setElement(array, index, element);
-
-        //then
-        Assert.assertFalse(actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
