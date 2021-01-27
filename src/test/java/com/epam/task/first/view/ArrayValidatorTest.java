@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ArrayValidatorTest {
 
     @Test
-    public void testValidateWhenLineIsCorrect(){
+    public void testValidateWhenLineIsCorrect() {
         String inputLine = "    1 3 5 234 45    56";
         ArrayValidator validator = new ArrayValidator();
 
@@ -17,7 +17,7 @@ public class ArrayValidatorTest {
     }
 
     @Test
-    public void testValidateWhenLineIsIncorrect(){
+    public void testValidateWhenLineIsIncorrect() {
         String inputLine = "1 3 5 234 45    5fg6";
         ArrayValidator validator = new ArrayValidator();
 

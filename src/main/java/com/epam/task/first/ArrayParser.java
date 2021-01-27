@@ -6,11 +6,13 @@ import java.util.List;
 
 public class ArrayParser {
 
-    public Array create(String data){
+    private final static String REG_SPACE = "\\s+";
+
+    public Array create(String data) {
         Array array = new Array();
         List<Integer> elements = array.getArray();
-        String[] rawData = data.split("\\s+");
-        for(String line: rawData){
+        String[] rawData = data.split(REG_SPACE);
+        for (String line : rawData) {
             elements.add(Integer.parseInt(line));
         }
         return array;

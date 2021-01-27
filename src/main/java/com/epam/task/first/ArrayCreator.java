@@ -20,17 +20,17 @@ public class ArrayCreator {
     }
 
     public List<Array> process(String fileName) throws DataException {
-        //read lines from file dataReader
+
         List<Array> arraysResult = new ArrayList<>();
         List<String> dataList = dataReader.readData(fileName);
-        //validate each line
+
         for (String line : dataList) {
             if (validator.validate(line)) {
                 arraysResult.add(parser.create(line));
             }
         }
         return arraysResult;
-       // throw new NotImplementedException();
+        // throw new NotImplementedException();
     }
 
 

@@ -8,7 +8,7 @@ public class Array {
 
     private final List<Integer> array;
 
-    public Array(Integer...array) {
+    public Array(Integer... array) {
         this.array = new ArrayList<>();
         this.array.addAll(Arrays.asList(array));
     }

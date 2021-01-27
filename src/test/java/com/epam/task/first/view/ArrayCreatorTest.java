@@ -37,7 +37,7 @@ public class ArrayCreatorTest {
 
         ArrayCreator creator = new ArrayCreator(reader, validator, parser);
 
-        List<Array> actual =  creator.process("");
+        List<Array> actual = creator.process("");
 
         List<Array> expected = new ArrayList<>();
         expected.add(new Array(1, 2, 3));
@@ -62,7 +62,7 @@ public class ArrayCreatorTest {
 
         ArrayCreator creator = new ArrayCreator(reader, validator, parser);
 
-        List<Array> actual =  creator.process("");
+        List<Array> actual = creator.process("");
 
         List<Array> expected = new ArrayList<>();
         expected.add(new Array(1, 2, 3));
@@ -71,10 +71,10 @@ public class ArrayCreatorTest {
 
     }
 
-    public boolean equals(List<Array> firstList, List<Array> secondList){
+    public boolean equals(List<Array> firstList, List<Array> secondList) {
 
 
-        for(int index = 0; index < firstList.size(); index++){
+        for (int index = 0; index < firstList.size(); index++) {
 
             Array first = firstList.get(index);
             Array second = secondList.get(index);
@@ -82,16 +82,16 @@ public class ArrayCreatorTest {
             List<Integer> firstElements = first.getArray();
             List<Integer> secondElements = second.getArray();
 
-            if(firstElements.size() != secondElements.size()){
+            if (firstElements.size() != secondElements.size()) {
                 return false;
             }
 
-            for(int compareIndex = 0; compareIndex < firstElements.size(); compareIndex++){
+            for (int compareIndex = 0; compareIndex < firstElements.size(); compareIndex++) {
 
                 int firstElement = firstElements.get(compareIndex);
                 int secondElement = secondElements.get(compareIndex);
 
-                if(firstElement != secondElement){
+                if (firstElement != secondElement) {
                     return false;
                 }
             }

@@ -24,14 +24,14 @@ public class DataReaderTest {
 
     }
 
-    public boolean equals(List<String> firstList, List<String> secondList){
-        if(firstList.size() != secondList.size()){
+    public boolean equals(List<String> firstList, List<String> secondList) {
+        if (firstList.size() != secondList.size()) {
             return false;
         }
-        for(int index = 0; index < firstList.size(); index++){
+        for (int index = 0; index < firstList.size(); index++) {
             String firstLine = firstList.get(index);
             String secondLine = secondList.get(index);
-            if(!firstLine.equals(secondLine)){
+            if (!firstLine.equals(secondLine)) {
                 return false;
             }
         }

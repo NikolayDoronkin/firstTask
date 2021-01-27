@@ -43,7 +43,7 @@ public class ArrayLogic {
         if (newValue % oldValue == 2) {
             elements.set(index, newValue);
             return newValue;
-        }else{
+        } else {
             return oldValue;
         }
     }

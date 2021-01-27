@@ -9,19 +9,18 @@ import java.util.Scanner;
 
 public class DataReader {
 
-    public List<String> readData(String fileName) throws DataException{
-        try{
+    public List<String> readData(String fileName) throws DataException {
+        try {
             List<String> lines = new ArrayList<>();
-            //чтение файла прописать здесь
             FileReader fileReader = new FileReader(fileName);
             Scanner scanner = new Scanner(fileReader);
-            while(scanner.hasNextLine()){
+            while (scanner.hasNextLine()) {
                 lines.add(scanner.nextLine());
             }
             fileReader.close();
             return lines;
 
-        }catch (IOException e){
+        } catch (IOException e) {
             throw new DataException(e.getMessage(), e);
         }
         //throw new NotImplementedException();
